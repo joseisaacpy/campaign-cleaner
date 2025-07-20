@@ -34,6 +34,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+    ,"dev": "concurrently \"cd client && npm run dev\" \"cd server && npm run dev\""
   },
   "keywords": [],
   "author": "",
