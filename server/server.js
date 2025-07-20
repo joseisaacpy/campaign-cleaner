@@ -1,9 +1,10 @@
 // Imports
 import express from "express";
-import cors from "cors";
-import multer from "multer";
 import dotenv from "dotenv";
 dotenv.config(); // Configuração do dotenv
+import cors from "cors";
+import multer from "multer";
+import limparRoutes from "./Routes/limpar.routes"; // Rotas para limpar a campanha
 
 // Constantes
 const app = express();
@@ -16,6 +17,8 @@ app.use(multer().any()); // Aceitar arquivos
 app.use(express.urlencoded({ extended: true })); // Aceitar dados de forms
 
 // Rotas
+app.use("/limpar", limparRoutes); // Rotas para limpar a campanha
+
 app.get("/", (req, res) => {
   res.status(200).send("Bem-vindo ao servidor!");
 });
