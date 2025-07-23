@@ -42,7 +42,11 @@ const Home = () => {
       link.click();
     } catch (error) {
       console.error("Erro ao limpar campanha:", error);
-      toast.error("Erro ao processar os arquivos.");
+      // toast.error("Erro ao processar os arquivos.");
+      // Troll
+      toast.error(
+        "É muito trouxa pensar que isso ia funcionar 😂😂😂😂😂😂😂😂😂."
+      );
     } finally {
       setLoading(false);
     }
